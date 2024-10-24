@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <title>Sistema de Login</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password"
+                id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+       </div> .
+id"result"></div>
+                    
+        
+        <script>
+            const form = document.getElementByld('login-form');
+            const result = document.getElementByld('result');
+            
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                
+                const username = document.getElementByld('username').value;
+                const password = document.getElementByld('password').value;
+                
+                //Simulação de banco de dados (substitua por um banco de dados real)
+                const users = {
+                    "usuario1": "senha1",
+                    "usuario2": "senha2"
+                };
+                if (users[username] === password) {
+                    result.textContent = `Bem-vindo, ${username}! Sua senha é ${password}`;
+                } else {
+                    result.textContent = "Nome de usuário ou senha incorretos.";
+            }
+            });
+            </script>
+    </body>
+</html>
